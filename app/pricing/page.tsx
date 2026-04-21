@@ -95,7 +95,7 @@ export default function PricingPage() {
                   </li>
                 ))}
               </ul>
-<Link href="/contact" className="block">
+<Link href={`/contact?plan=${encodeURIComponent(plan.name)}`}  className="block">
               <button className={`w-full py-4 rounded-xl font-bold cursor-pointer transition-all ${
                 plan.highlight 
                 ? "bg-indigo-600 hover:bg-indigo-500 cursor-pointer text-white" 
