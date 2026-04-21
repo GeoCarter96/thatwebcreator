@@ -1,5 +1,5 @@
 'use client'
-
+import { useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Suspense, useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
@@ -12,7 +12,9 @@ function ContactFormContent() {
   const formRef = useRef<HTMLFormElement>(null);
   const [agreed, setAgreed] = useState(false);
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
-
+useEffect(() => {
+  emailjs.init("UJBA30cB3h3rGvO9M"); // Your Public Key
+}, []);
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formRef.current) return;
