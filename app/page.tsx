@@ -57,7 +57,7 @@ export default function PortfolioPage() {
 
         <div className="mt-12">
           <a href="#work" className="group relative inline-flex items-center gap-2 rounded-full bg-slate-800 px-8 py-4 text-sm font-bold text-white transition-all hover:bg-slate-700">
-            View My Work
+            View Our Work
             <span className="transition-transform group-hover:translate-x-1">→</span>
           </a>
         </div>

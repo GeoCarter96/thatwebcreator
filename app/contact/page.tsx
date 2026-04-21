@@ -20,7 +20,7 @@ function ContactFormContent() {
     setStatus('sending');
 
     emailjs.sendForm(
-      'service_lz7rt3p',   // Replace with your Service ID
+      'service_04lmk1m',   // Replace with your Service ID
       'template_krxf7y8',  // Replace with your Template ID
       formRef.current,
       'UJBA30cB3h3rGvO9M'    // Replace with your Public Key
