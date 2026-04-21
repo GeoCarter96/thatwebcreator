@@ -1,5 +1,5 @@
 import Image from 'next/image';
-
+import Link from 'next/link';
 export default function PricingPage() {
   const plans = [
     {
@@ -38,7 +38,7 @@ export default function PricingPage() {
          
           
           <div className="flex items-center gap-6 text-sm font-medium">
-            <a href="/" className="text-slate-400 hover:text-white transition-colors">🡨 Back</a>
+            <a href="/" className="text-slate-400 hover:text-white transition-colors border-white border-2 px-4 py-2 rounded-full"> Back</a>
           
           </div>
         </div>
@@ -95,14 +95,15 @@ export default function PricingPage() {
                   </li>
                 ))}
               </ul>
-
-              <button className={`w-full py-4 rounded-xl font-bold transition-all ${
+<Link href="/contact" className="block">
+              <button className={`w-full py-4 rounded-xl font-bold cursor-pointer transition-all ${
                 plan.highlight 
-                ? "bg-indigo-600 hover:bg-indigo-500 text-white" 
-                : "bg-slate-800 hover:bg-slate-700 text-white"
+                ? "bg-indigo-600 hover:bg-indigo-500 cursor-pointer text-white" 
+                : "bg-slate-800 hover:bg-slate-700 text-white cursor-pointer"
               }`}>
                 {plan.cta}
               </button>
+               </Link>
             </div>
           ))}
         </div>

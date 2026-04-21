@@ -35,13 +35,13 @@ export default function PortfolioPage() {
         {/* Subtle Background Glow */}
         <div className="absolute top-0 -z-10 h-full w-full bg-[radial-gradient(circle_at_50%_120%,#1e1b4b,rgba(2,6,23,0))]" />
         
-       <div className="mb-12 flex h-20 w-56 items-center justify-center border-2 border-slate-800 bg-slate-900/30  ">
+       <div className="mb-12 flex h-20 w-56 items-center justify-center   ">
   <Image 
-    src="/logo.jpeg"          // Put your logo file in the 'public' folder
+    src="/logotrans.png"          // Put your logo file in the 'public' folder
     alt="Your Logo" 
-    width={224}             // Matches the w-56 (56 * 4px)
-    height={80}              // Matches the h-20 (20 * 4px)
-    className="object-contain border-rounded " // 'p-2' keeps it from touching the edges
+    width={300}             // Matches the w-56 (56 * 4px)
+    height={300}              // Matches the h-20 (20 * 4px)
+    className="object-contain border-rounded text-white " // 'p-2' keeps it from touching the edges
   />
 </div>
 

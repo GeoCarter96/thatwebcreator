@@ -11,7 +11,7 @@ export default function ContactPage() {
       <nav className="fixed top-0 w-full z-50 bg-[#020617]/80 backdrop-blur-xl border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-6 text-sm font-medium">
-            <a href="/" className="text-slate-400 hover:text-white transition-colors"> 🡨 Back</a>
+<a href="/" className="text-slate-400 hover:text-white transition-colors border-white border-2 px-4 py-2 rounded-full"> Back</a>
           </div>
         </div>
       </nav>
