@@ -3,13 +3,14 @@ import Image from 'next/image';
 
 export default function PortfolioPage() {
   const projects = [
-    { id: 1, title: "Modern E-Commerce", description: "Full-stack shop with Next.js and Stripe.", link: "#" },
-    { id: 2, title: "Corporate Landing Page", description: "High-conversion page with optimized SEO.", link: "#" },
-    { id: 3, title: "SaaS Dashboard", description: "Complex data visualization and management.", link: "#" },
-    { id: 4, title: "Fintech App", description: "Secure banking interface and API integration.", link: "#" },
-    { id: 5, title: "AI Content Platform", description: "Generative AI interface with real-time updates.", link: "#" },
-    { id: 6, title: "Creative Studio", description: "Minimalist portfolio with smooth animations.", link: "#" }
-  ];
+  { id: 1, title: "Tats By JB", description: "Website for a tattoo artist.", link: "https://tatsbyjb.vercel.app/", image: "/tats.png" },
+
+  { id: 2, title: "THE WUN", description: "Contact and advertising website for virtual creator.", link: "https://thewun-sigma.vercel.app/", image: "/wun.png" },
+  { id: 3, title: "More Life", description: "Health and wellness vegan restaurant website.", link: "https://morelife-one.vercel.app/", image: "/more.png" },
+  { id: 4, title: "Blade Gym", description: "Gym mockup website.", link: "https://bladegym.vercel.app/", image: "/bladegym.png" },
+  { id: 5, title: "Beauty Meets Nerd", description: "Minimalist website for content creator.", link: "https://beautymeetsnerd.vercel.app/", image: "/beautymeetsnerd.png" }
+];
+
 
   return (
     <div className="min-h-screen bg-[#020617] font-sans text-slate-200 selection:bg-indigo-500/30">
@@ -21,8 +22,8 @@ export default function PortfolioPage() {
           
           <div className="flex items-center gap-6 text-sm font-medium">
 
-            <a href="#pricing" className="text-slate-400 hover:text-white transition-colors">Pricing</a>
-            <a href="#contact" className="bg-white text-black px-5 py-2 rounded-full font-bold hover:bg-slate-200 transition-all">
+            <a href="/pricing" className="text-slate-400 hover:text-white transition-colors">Pricing</a>
+            <a href="/contact" className="bg-white text-black px-5 py-2 rounded-full font-bold hover:bg-slate-200 transition-all">
               Contact
             </a>
           </div>
@@ -74,9 +75,15 @@ export default function PortfolioPage() {
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
-            <a key={project.id} href={project.link} className="group block">
+            <a key={project.id} href={project.link}   target="_blank" 
+        rel="noopener noreferrer" className="group block">
               <div className="relative aspect-[16/10] w-full overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 transition-all group-hover:border-indigo-500/50">
-                {/* Project Image Placeholder */}
+                   <Image
+        src={project.image}
+        alt={project.title}
+        fill
+        className="object-cover transition-transform duration-500 group-hover:scale-110"
+      />
                 <div className="flex h-full w-full items-center justify-center text-slate-800 transition-transform duration-500 group-hover:scale-110">
                   <svg className="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
@@ -104,7 +111,15 @@ export default function PortfolioPage() {
             © {new Date().getFullYear()} ThatWebCreator
           </p>
           <div className="flex gap-8 text-xs font-bold text-slate-500 uppercase tracking-tighter">
-            <a href="#" className="hover:text-white transition-colors">Instagram</a>
+            <a 
+  href="https://www.instagram.com/thatwebcreator" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  className="hover:text-white transition-colors"
+>
+  Instagram
+</a>
+
 
           </div>
         </div>
